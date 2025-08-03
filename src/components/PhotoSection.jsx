@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Camera, Heart } from 'lucide-react'
 import { photosConfig, getPhotoPath } from '../config/photos'
+import PhotoModal from './PhotoModal'
 
 const PhotoSection = () => {
   const containerVariants = {
@@ -29,6 +30,40 @@ const PhotoSection = () => {
     ...photo,
     src: getPhotoPath(photo.filename)
   }))
+
+  // Стан для модального вікна
+  const [selectedPhoto, setSelectedPhoto] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Функції для модального вікна
+  const openPhoto = (photo) => {
+    setSelectedPhoto(photo)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedPhoto(null)
+  }
+
+  const goToNext = () => {
+    if (selectedPhoto) {
+      const currentIndex = photos.findIndex(p => p.id === selectedPhoto.id)
+      const nextIndex = (currentIndex + 1) % photos.length
+      setSelectedPhoto(photos[nextIndex])
+    }
+  }
+
+  const goToPrevious = () => {
+    if (selectedPhoto) {
+      const currentIndex = photos.findIndex(p => p.id === selectedPhoto.id)
+      const prevIndex = currentIndex === 0 ? photos.length - 1 : currentIndex - 1
+      setSelectedPhoto(photos[prevIndex])
+    }
+  }
+
+  const hasNext = selectedPhoto && photos.findIndex(p => p.id === selectedPhoto.id) < photos.length - 1
+  const hasPrevious = selectedPhoto && photos.findIndex(p => p.id === selectedPhoto.id) > 0
 
   return (
     <section style={{
@@ -102,6 +137,7 @@ const PhotoSection = () => {
                 rotate: [0, -5, 5, 0],
                 transition: { duration: 0.3 }
               }}
+              onClick={() => openPhoto(photo)}
               style={{
                 background: 'rgba(255, 255, 255, 0.2)',
                 borderRadius: '20px',
@@ -205,16 +241,31 @@ const PhotoSection = () => {
                   color: '#fff',
                   fontSize: '1.1rem',
                   fontWeight: '600',
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                  marginBottom: '8px'
                 }}
               >
                 {photo.description}
               </motion.h3>
+              
+              <motion.p
+                style={{
+                  color: 'rgba(255,255,255,0.8)',
+                  fontSize: '0.9rem',
+                  fontStyle: 'italic',
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+                }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                👆 Натисніть для перегляду
+              </motion.p>
             </motion.div>
           ))}
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={photoVariants}
           style={{
             textAlign: 'center',
@@ -239,7 +290,7 @@ const PhotoSection = () => {
             <br />
             3. У файлі <code style={{background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: '4px'}}>src/config/photos.js</code> змініть <code style={{background: 'rgba(255,255,255,0.2)', padding: '2px 6px', borderRadius: '4px'}}>hasRealPhoto: true</code> 📷✨
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Floating hearts decoration */}
         <motion.div
@@ -284,6 +335,17 @@ const PhotoSection = () => {
         >
           🌟
         </motion.div>
+
+        {/* Модальне вікно для фотографій */}
+        <PhotoModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          photo={selectedPhoto}
+          onNext={goToNext}
+          onPrevious={goToPrevious}
+          hasNext={hasNext}
+          hasPrevious={hasPrevious}
+        />
       </motion.div>
     </section>
   )
