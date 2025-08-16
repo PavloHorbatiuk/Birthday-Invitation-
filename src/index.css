@@ -20,13 +20,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 .container {
   position: relative;
   text-align: center;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
 }
 
@@ -35,14 +34,14 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 5px;
 }
 
 .invitation-card {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 25px;
-  padding: 40px;
+  padding: 10px;
   max-width: 500px;
   width: 100%;
   box-shadow: 
