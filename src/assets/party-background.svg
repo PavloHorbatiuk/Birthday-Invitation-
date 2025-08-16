@@ -1,0 +1,51 @@
+<svg width="1400" height="800" viewBox="0 0 1400 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="800" fill="#f8f9ff"/>
+  
+  <!-- Balloons -->
+  <g transform="translate(140, 70)">
+    <!-- Balloon 1 -->
+    <ellipse cx="30" cy="40" rx="25" ry="35" fill="#87CEEB" stroke="#5DADE2" stroke-width="2"/>
+    <path d="M30 75 L30 85 Q30 90 25 95 L35 95 Q30 90 30 85 Z" fill="#5DADE2"/>
+    <line x1="30" y1="95" x2="30" y2="130" stroke="#5DADE2" stroke-width="2"/>
+    <ellipse cx="27" cy="25" rx="8" ry="12" fill="rgba(255,255,255,0.6)"/>
+    
+    <!-- Balloon 2 -->
+    <ellipse cx="70" cy="60" rx="20" ry="28" fill="#87CEEB" stroke="#5DADE2" stroke-width="2"/>
+    <path d="M70 88 L70 95 Q70 98 67 101 L73 101 Q70 98 70 95 Z" fill="#5DADE2"/>
+    <line x1="70" y1="101" x2="70" y2="130" stroke="#5DADE2" stroke-width="2"/>
+    <ellipse cx="68" cy="50" rx="6" ry="9" fill="rgba(255,255,255,0.6)"/>
+  </g>
+  
+  <!-- Party Hat -->
+  <g transform="translate(1300, 600)">
+    <path d="M0 40 L20 0 L40 40 Z" fill="#FF69B4"/>
+    <path d="M0 40 L40 40 Q20 45 0 40" fill="#FF1493"/>
+    <circle cx="6" cy="20" r="3" fill="white"/>
+    <circle cx="20" cy="15" r="3" fill="white"/>
+    <circle cx="34" cy="22" r="3" fill="white"/>
+    <ellipse cx="20" cy="3" rx="8" ry="4" fill="#FFD700"/>
+  </g>
+  
+  <!-- Confetti pieces -->
+  <g>
+    <!-- Orange confetti -->
+    <rect x="20" y="120" width="8" height="3" fill="#FF6347" transform="rotate(45 24 121.5)"/>
+    <rect x="280" y="550" width="8" height="3" fill="#FF6347" transform="rotate(30 284 551.5)"/>
+    <rect x="990" y="430" width="8" height="3" fill="#FF6347" transform="rotate(60 994 431.5)"/>
+    <rect x="1300" y="120" width="8" height="3" fill="#FF6347" transform="rotate(15 1304 121.5)"/>
+    <rect x="700" y="690" width="8" height="3" fill="#FF6347" transform="rotate(75 704 691.5)"/>
+    
+    <!-- Blue confetti -->
+    <rect x="600" y="140" width="8" height="3" fill="#4169E1" transform="rotate(30 604 141.5)"/>
+    <rect x="1320" y="180" width="8" height="3" fill="#4169E1" transform="rotate(45 1324 181.5)"/>
+    <rect x="25" y="480" width="8" height="3" fill="#4169E1" transform="rotate(60 29 481.5)"/>
+    <rect x="1350" y="450" width="8" height="3" fill="#4169E1" transform="rotate(15 1354 451.5)"/>
+    <rect x="1300" y="720" width="8" height="3" fill="#4169E1" transform="rotate(75 1304 721.5)"/>
+    
+    <!-- Gold streamers -->
+    <path d="M60 290 Q80 310 100 330 Q120 350 140 370" stroke="#FFD700" stroke-width="4" fill="none"/>
+    <path d="M620 140 Q640 160 660 180 Q680 200 700 220" stroke="#FFD700" stroke-width="4" fill="none"/>
+    <path d="M250 300 Q270 320 290 340 Q310 360 330 380" stroke="#FFD700" stroke-width="4" fill="none"/>
+  </g>
+</svg>
