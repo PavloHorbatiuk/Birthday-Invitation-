@@ -1,5 +1,5 @@
 import React from "react";
-import numberOneImage from '../assets/vecteezy_1-numeric-number-character-environmental-eco-environment-day_7854306.jpg';
+import numberOneImage from '../assets/vecteezy_1-numeric-number-character-environmental-eco-environment-day_7854306.jpg?url';
 
 const PartyInvitation = () => {
   return (
@@ -60,7 +60,18 @@ const PartyInvitation = () => {
                 src={numberOneImage} 
                 alt="Number 1 with nature elements" 
                 className="number-one-image"
+                loading="lazy"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  const fallback = e.target.nextSibling;
+                  if (fallback) {
+                    fallback.style.display = 'block';
+                  }
+                }}
               />
+              <div style={{display: 'none'}} className="fallback-number">
+                <span style={{fontSize: '4rem', fontWeight: 'bold', color: '#059669'}}>1</span>
+              </div>
             </div>
             <div className="age-text-new">
               <span className="age-word-new">перший рік життя</span>
