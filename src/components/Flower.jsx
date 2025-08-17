@@ -1,17 +1,31 @@
 import React from "react";
-import numberOneImage from '../assets/vecteezy_1-numeric-number-character-environmental-eco-environment-day_7854306.jpg?url';
+import oneYearSvg from '../assets/1year.svg';
+import balloonsSvg from '../assets/needcoffee_Balloons.svg';
 
 const PartyInvitation = () => {
   return (
     <div className="party-container">
+      {/* Floating background balloons */}
+      <div className="floating-balloons">
+        <img src={balloonsSvg} alt="" className="floating-balloon balloon-1" />
+        <img src={balloonsSvg} alt="" className="floating-balloon balloon-2" />
+        <img src={balloonsSvg} alt="" className="floating-balloon balloon-3" />
+      </div>
+      
       <div className="invitation-card">
         <div className="card-header">
           <div className="party-hat">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C13.1 2 14 2.9 14 4V5.5L22 7.5V9L20 10L22 11V12.5L14 10.5V12C14 13.1 13.1 14 12 14S10 13.1 10 12V10.5L2 12.5V11L4 10L2 9V7.5L10 5.5V4C10 2.9 10.9 2 12 2M8 17C8.6 17 9 17.4 9 18S8.6 19 8 19 7 18.6 7 18 7.4 17 8 17M16 17C16.6 17 17 17.4 17 18S16.6 19 16 19 15 18.6 15 18 15.4 17 16 17M12 20C12.6 20 13 20.4 13 21S12.6 22 12 22 11 21.6 11 21 11.4 20 12 20Z" />
-            </svg>
+            {/* <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C14 2 16 4 16 6C16 8 14 10 12 10C10 10 8 8 8 6C8 4 10 2 12 2Z" fill="#FF69B4"/>
+              <path d="M6 4C8 4 10 6 10 8C10 10 8 12 6 12C4 12 2 10 2 8C2 6 4 4 6 4Z" fill="#DDA0DD"/>
+              <path d="M18 4C20 4 22 6 22 8C22 10 20 12 18 12C16 12 14 10 14 8C14 6 16 4 18 4Z" fill="#FFB6C1"/>
+              <line x1="12" y1="10" x2="12" y2="20" stroke="#8B4513" strokeWidth="1"/>
+              <line x1="6" y1="12" x2="8" y2="20" stroke="#8B4513" strokeWidth="1"/>
+              <line x1="18" y1="12" x2="16" y2="20" stroke="#8B4513" strokeWidth="1"/>
+            </svg> */}
+            <img src={balloonsSvg} alt="Party Balloons" className="balloons-decoration" />
           </div>
-          <h1 className="party-title">З Днем Народження!</h1>
+          <h1 className="party-title">  Запрошення на День народження Мелісочки</h1>
           <div className="celebration-icons">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C13.1 2 14 2.9 14 4V5.5L22 7.5V9L20 10L22 11V12.5L14 10.5V12C14 13.1 13.1 14 12 14S10 13.1 10 12V10.5L2 12.5V11L4 10L2 9V7.5L10 5.5V4C10 2.9 10.9 2 12 2Z" />
@@ -26,11 +40,7 @@ const PartyInvitation = () => {
         </div>
 
         <div className="card-body">
-          <p className="party-subtitle">
-            Запрошення на День народження Мелісочки
-          </p>
-
-          <div className="birthday-girl">
+          {/* <div className="birthday-girl">
             <div className="name-decoration">
               <svg
                 width="24"
@@ -41,7 +51,6 @@ const PartyInvitation = () => {
                 <path d="M9,11H7L9,9L11,11H9V13H11L9,15L7,13H9V11M15,11V13H13L15,15L17,13H15V11H17L15,9L13,11H15M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z" />
               </svg>
             </div>
-            <div className="birthday-name">Меліса</div>
             <div className="name-decoration">
               <svg
                 width="24"
@@ -52,30 +61,14 @@ const PartyInvitation = () => {
                 <path d="M9,11H7L9,9L11,11H9V13H11L9,15L7,13H9V11M15,11V13H13L15,15L17,13H15V11H17L15,9L13,11H15M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z" />
               </svg>
             </div>
-          </div>
+          </div> */}
 
-          <div className="age-celebration">
-            <div className="number-one-container">
-              <img 
-                src={numberOneImage} 
-                alt="Number 1 with nature elements" 
-                className="number-one-image"
-                loading="lazy"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  const fallback = e.target.nextSibling;
-                  if (fallback) {
-                    fallback.style.display = 'block';
-                  }
-                }}
-              />
-              <div style={{display: 'none'}} className="fallback-number">
-                <span style={{fontSize: '4rem', fontWeight: 'bold', color: '#059669'}}>1</span>
-              </div>
-            </div>
-            <div className="age-text-new">
-              <span className="age-word-new">перший рік життя</span>
-            </div>
+          <div className="birthday-design-container">
+            <img 
+              src={oneYearSvg} 
+              alt="1 Year" 
+              className="birthday-design"
+            />
           </div>
 
           <div className="party-details">
