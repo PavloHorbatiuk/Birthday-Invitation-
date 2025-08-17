@@ -6,9 +6,9 @@
 
 body {
   font-family: 'Comfortaa', cursive;
-  background: url('./assets/party-background.svg') no-repeat center center fixed;
+  background: url('./assets/image1.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-color: #f8f9ff;
+  background-color: #0e7490;
   min-height: 100vh;
   overflow-x: hidden;
   color: #4a5568;
@@ -25,7 +25,7 @@ body {
 .container {
   position: relative;
   text-align: center;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -41,7 +41,7 @@ body {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 25px;
-  padding: 10px;
+  padding: 20px;
   max-width: 500px;
   width: 100%;
   box-shadow: 
@@ -68,7 +68,7 @@ body {
 }
 
 .card-header {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .party-hat {
@@ -127,7 +127,7 @@ body {
 .card-body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .party-subtitle {
@@ -171,16 +171,183 @@ body {
   text-shadow: 2px 2px 4px rgba(255, 107, 157, 0.3);
 }
 
-.age-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff6b9d, #8b5cf6);
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 10px 25px;
-  border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
-  margin: 15px 0;
+.age-celebration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 25px 0;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(13, 148, 136, 0.25);
+  border: 2px solid rgba(94, 234, 212, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.number-one-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.number-one-image {
+  max-width: 200px;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  animation: imageFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(16, 185, 129, 0.3));
+}
+
+@keyframes imageFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+.gift-box {
+  animation: giftFloat 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.decorative-number-one {
+  animation: gentleFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(16, 185, 129, 0.2));
+}
+
+@keyframes giftFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.flower-decoration {
+  animation: flowerPulse 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes flowerPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.top-flower {
+  animation-delay: 0s;
+}
+
+.bottom-flower {
+  animation-delay: 1s;
+}
+
+.leaf-decoration {
+  animation: leafSway 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes leafSway {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-3deg) scale(0.95);
+  }
+}
+
+.star-decoration {
+  animation: starShimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes starShimmer {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+.age-text-new {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.gift-base {
+  animation: giftPulse 4s ease-in-out infinite;
+}
+
+@keyframes giftPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.bow-left, .bow-right {
+  animation: bowFloat 2s ease-in-out infinite alternate;
+}
+
+@keyframes bowFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+.gift-number {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: numberGlow 3s ease-in-out infinite;
+}
+
+@keyframes numberGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.8));
+  }
+}
+
+.age-word-new {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #059669, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(5, 150, 105, 0.2);
+  letter-spacing: 0.5px;
 }
 
 .party-details {
@@ -195,10 +362,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   padding: 12px 20px;
   border-radius: 15px;
-  border: 2px solid rgba(255, 182, 193, 0.3);
+  border: 2px solid rgba(94, 234, 212, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .location-item {
@@ -257,7 +425,7 @@ body {
 
 .detail-icon {
   font-size: 1.2rem;
-  color: #8b5cf6;
+  color: #059669;
   display: flex;
   align-items: center;
 }
@@ -269,11 +437,12 @@ body {
 }
 
 .party-message {
-  background: rgba(255, 182, 193, 0.1);
+  background: rgba(94, 234, 212, 0.1);
   padding: 20px;
   border-radius: 15px;
-  border: 2px solid rgba(255, 182, 193, 0.3);
+  border: 2px solid rgba(94, 234, 212, 0.3);
   line-height: 1.6;
+  backdrop-filter: blur(5px);
 }
 
 .party-message p {
@@ -720,9 +889,28 @@ body {
     font-size: 1.2rem;
   }
   
-  .age-badge {
-    font-size: 1.2rem;
-    padding: 8px 20px;
+  .age-celebration {
+    padding: 20px 15px;
+    margin: 20px 0;
+  }
+  
+  .number-one-image {
+    max-width: 160px;
+    max-height: 220px;
+  }
+  
+  .gift-box {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .decorative-number-one {
+    width: 160px;
+    height: 220px;
+  }
+  
+  .age-word-new {
+    font-size: 1.1rem;
   }
   
   .detail-item {
