@@ -102,7 +102,7 @@ body {
   margin-bottom: 20px;
   animation: pulse 3s ease-in-out infinite;
   display: flex;
-  gap: 15px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
 }
@@ -141,7 +141,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
   margin: 20px 0;
 }
 
@@ -175,7 +175,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   margin: 25px 0;
   padding: 30px 20px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
@@ -353,7 +353,7 @@ body {
 .party-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 5px;
   margin: 25px 0;
 }
 
@@ -361,7 +361,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   background: rgba(255, 255, 255, 0.8);
   padding: 12px 20px;
   border-radius: 15px;
@@ -372,7 +372,7 @@ body {
 .location-item {
   flex-direction: column;
   align-items: stretch;
-  gap: 15px;
+  gap: 5px;
   padding: 15px 20px;
 }
 
@@ -404,7 +404,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   background: linear-gradient(135deg, #4285f4, #34a853);
   color: white;
   text-decoration: none;
@@ -878,7 +878,7 @@ body {
   
   .celebration-icons {
     font-size: 1.2rem;
-    gap: 10px;
+    gap: 5px;
   }
   
   .birthday-name {
